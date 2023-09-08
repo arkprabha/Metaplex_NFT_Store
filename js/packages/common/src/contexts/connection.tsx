@@ -173,7 +173,7 @@ export function useConnection() {
 export function useConnectionConfig() {
   const context = useContext(ConnectionContext);
   return {
-    endpoint: context.endpoint,
+    endpoint: clusterApiUrl('devnet'),
     setEndpoint: context.setEndpoint,
     env: context.env,
     tokens: context.tokens,

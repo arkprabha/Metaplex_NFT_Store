@@ -13,7 +13,6 @@
     "emitDecoratorMetadata": true,
     "noLib": false,
     "preserveConstEnums": true,
-    "suppressImplicitAnyIndexErrors": true,
     "resolveJsonModule": true,
     "lib": ["dom", "es2019"]
   },

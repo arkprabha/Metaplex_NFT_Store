@@ -5,6 +5,9 @@ import { ENDPOINTS, useConnectionConfig } from '../../contexts/connection';
 import { useWalletModal } from '../../contexts';
 import { notify, shortenAddress } from '../../utils';
 import { CopyOutlined } from '@ant-design/icons';
+import {
+  clusterApiUrl,
+} from '@solana/web3.js';
 
 export const Settings = ({
   additionalSettings,
@@ -22,7 +25,7 @@ export const Settings = ({
         Network:{' '}
         <Select
           onSelect={setEndpoint}
-          value={endpoint}
+          value={clusterApiUrl('devnet')}
           style={{ marginBottom: 20 }}
         >
           {ENDPOINTS.map(({ name, endpoint }) => (
